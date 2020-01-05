@@ -9,7 +9,7 @@ import ExplorePage from '../../Routes/ExplorePage/ExplorePage';
 import ShopPage from '../../Routes/ShopPage/ShopPage';
 import ShopListContext from '../../Contexts/ShopListContext';
 import ShopService from '../../Service/ShopService';
-// import FavoritePage from '../../Routes/FavoritePage/FavoritePage';
+import FavouritePage from '../../Routes/FavouritePage/FavouritePage';
 
 export default class App extends Component {
 
@@ -55,7 +55,7 @@ export default class App extends Component {
             />
           }} 
         />
-        {/* <Route path={`/favourite`} component={FavoritePage}/> */}
+        <Route path={`/favourite`} component={FavouritePage}/>
       </Switch>
     </div>
     );
