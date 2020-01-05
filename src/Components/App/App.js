@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import './App.css';
-// import Navbar from '../Navbar/Navbar'
+import Navbar from '../Navbar/Navbar'
 // import Landing from '../Landing/Landing';
 // import SignUpPage from '../../Routes/SignUpPage/SignUpPage';
 // import LoginPage from '../../Routes/LoginPage/LoginPage';
@@ -39,14 +39,13 @@ export default class App extends Component {
     return (
       <div className='App'>
       <Redirect path='/' to={`${config.BASEPATH}`} />
-      TESTING APP COMPONENT
-      {/* <Route path={`${config.BASEPATH}`} component={Navbar} />
+      <Route path={`${config.BASEPATH}`} component={Navbar} />
       <Switch>
-        <Route exact path={`${config.BASEPATH}`} component={Landing} />
-        <Route exact path={`${config.BASEPATH}/signup`} component={SignUpPage} />
-        <Route exact path={`${config.BASEPATH}/login`} component={LoginPage} />
-        <Route exact path={`${config.BASEPATH}/explore`} component={ExplorePage} />
-        <Route 
+        {/* <Route exact path={`${config.BASEPATH}`} component={Landing} /> */}
+        {/* <Route exact path={`${config.BASEPATH}/signup`} component={SignUpPage} /> */}
+        {/* <Route exact path={`${config.BASEPATH}/login`} component={LoginPage} /> */}
+        {/* <Route exact path={`${config.BASEPATH}/explore`} component={ExplorePage} /> */}
+        {/* <Route 
           exact 
           path={`${config.BASEPATH}/shop/:id`} 
           component={ (rprops) => {
@@ -57,9 +56,9 @@ export default class App extends Component {
               shop={shop}
             />
           }} 
-        />
-        <Route path={`${config.BASEPATH}/favourite`} component={FavoritePage}/>
-      </Switch> */}
+        /> */}
+        {/* <Route path={`${config.BASEPATH}/favourite`} component={FavoritePage}/> */}
+      </Switch>
     </div>
     );
   }
