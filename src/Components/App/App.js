@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom'
 import './App.css';
 import Navbar from '../Navbar/Navbar'
-// import Landing from '../Landing/Landing';
+import Landing from '../Landing/Landing';
 // import SignUpPage from '../../Routes/SignUpPage/SignUpPage';
 // import LoginPage from '../../Routes/LoginPage/LoginPage';
 // import ExplorePage from '../../Routes/ExplorePage/ExplorePage';
@@ -41,7 +41,7 @@ export default class App extends Component {
       <Redirect path='/' to={`${config.BASEPATH}`} />
       <Route path={`${config.BASEPATH}`} component={Navbar} />
       <Switch>
-        {/* <Route exact path={`${config.BASEPATH}`} component={Landing} /> */}
+        <Route exact path={`${config.BASEPATH}`} component={Landing} />
         {/* <Route exact path={`${config.BASEPATH}/signup`} component={SignUpPage} /> */}
         {/* <Route exact path={`${config.BASEPATH}/login`} component={LoginPage} /> */}
         {/* <Route exact path={`${config.BASEPATH}/explore`} component={ExplorePage} /> */}
