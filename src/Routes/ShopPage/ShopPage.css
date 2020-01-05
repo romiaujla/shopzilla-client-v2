@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+/* Style side-by-side container*/
+.seller-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  margin: auto;
+  margin-top: 2em;
+}
+.seller-page .side-profile {
+  flex-basis: 35%;
+  margin: 0px 40px;
+}
+.seller-page .side-profile img {
+  border-radius: 3px;
+}
+.seller-page .items {
+  flex-basis: 55%;
+  border: none;
+  padding: 20px;
+  margin: 0px;
+}
+.seller-page .container {
+  margin: 20px 0px;
+  padding: 0px;
+}
+/* End styleing side-by-side container*/
+
+.shop-info .description {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.8em;
+  margin: 15px 0px;
+  font-size: 0.9em;
+}
+/* Style items */
+.seller-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  border-radius: 5px;
+}
+
+.seller-page .grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.seller-page .grid > article img {
+  max-width: 100%;
+}
+
+.seller-page .grid .text {
+  padding: 20px;
+  text-align: center;
+}
+
+.seller-page .grid .text h3 {
+  font-size: 1.4rem;
+}
+
+.seller-page .grid .text p {
+  font-size: 0.9rem;
+}
+
+.seller-page .grid .text p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+}
+
+.seller-page .btn {
+  padding: 10px 40px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.seller-page .shop-info .shop-name {
+  text-transform: capitalize;
+  letter-spacing: 0.06em;
+  margin-top: 15px;
+}
+/* End styling items */
+
+.seller-page .not-bold {
+  font-weight: 400;
+}
+
+.seller-page .shop-info {
+  margin-bottom: 10px;
+}
+
+.no-items {
+  margin-top: 100px;
+}
+
+.no-item-header {
+  margin-top: 250px;
+}
+
+.btn-delete {
+  display: inline-block;
+  background: var(--primary-color);
+  color: rgb(255, 255, 255);
+  padding: 0.2rem 0.4rem;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+
+/*Style pagination*/
+.seller-page .pagination {
+  display: inline-block;
+}
+
+.seller-page .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.seller-page .pagination a.active {
+  background-color: #e16b22;
+  color: white;
+  border-radius: 5px;
+}
+
+.seller-page .pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+/* End Styling pagination*/
+
+@media only screen and (max-width: 800px) {
+  .seller-page .side-profile {
+    flex-basis: 75%;
+    margin: 0px;
+  }
+}

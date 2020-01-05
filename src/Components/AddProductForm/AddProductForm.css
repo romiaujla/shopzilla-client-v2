@@ -1,0 +1,33 @@
+.ProductForm fieldset{
+    border: none;
+}
+
+.ProductForm input{
+    text-transform: none;
+}
+
+.ProductForm .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductForm .flex label{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductForm .flex textarea{
+    resize: none;   
+    height: 150px;
+    font-family: Poppins;
+    text-transform: none;
+}
+
+.ProductForm #shop-name{
+    text-transform: capitalize;
+}
+
+.ProductForm select{
+    font-family: Poppins, sans-serif;
+}

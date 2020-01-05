@@ -6,7 +6,7 @@ import Landing from '../Landing/Landing';
 import SignUpPage from '../../Routes/SignUpPage/SignUpPage';
 import LoginPage from '../../Routes/LoginPage/LoginPage';
 import ExplorePage from '../../Routes/ExplorePage/ExplorePage';
-// import ShopPage from '../../Routes/ShopPage/ShopPage';
+import ShopPage from '../../Routes/ShopPage/ShopPage';
 import ShopListContext from '../../Contexts/ShopListContext';
 import ShopService from '../../Service/ShopService';
 // import FavoritePage from '../../Routes/FavoritePage/FavoritePage';
@@ -43,7 +43,7 @@ export default class App extends Component {
         <Route exact path={`/signup`} component={SignUpPage} />
         <Route exact path={`/login`} component={LoginPage} />
         <Route exact path='/explore' component={ExplorePage} />
-        {/* <Route 
+        <Route 
           exact 
           path={`/shop/:id`} 
           component={ (rprops) => {
@@ -54,7 +54,7 @@ export default class App extends Component {
               shop={shop}
             />
           }} 
-        /> */}
+        />
         {/* <Route path={`/favourite`} component={FavoritePage}/> */}
       </Switch>
     </div>
