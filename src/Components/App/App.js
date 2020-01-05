@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import './App.css';
 import Navbar from '../Navbar/Navbar'
 import Landing from '../Landing/Landing';
-// import SignUpPage from '../../Routes/SignUpPage/SignUpPage';
+import SignUpPage from '../../Routes/SignUpPage/SignUpPage';
 import LoginPage from '../../Routes/LoginPage/LoginPage';
 import ExplorePage from '../../Routes/ExplorePage/ExplorePage';
 // import ShopPage from '../../Routes/ShopPage/ShopPage';
@@ -40,7 +40,7 @@ export default class App extends Component {
       <Route path='/' component={Navbar} />
       <Switch>
         <Route exact path='/' component={Landing} />
-        {/* <Route exact path={`/signup`} component={SignUpPage} /> */}
+        <Route exact path={`/signup`} component={SignUpPage} />
         <Route exact path={`/login`} component={LoginPage} />
         <Route exact path='/explore' component={ExplorePage} />
         {/* <Route 

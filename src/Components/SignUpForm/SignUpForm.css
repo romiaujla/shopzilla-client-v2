@@ -1,0 +1,28 @@
+.SignUpForm .error{
+    color:red;
+    font-size: 0.8em;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.SignUpForm button:disabled{
+    cursor: initial;
+    background-color: silver;
+}
+
+.SignUpForm .label-tag{
+    margin-bottom: 5px;
+}
+
+.SignUpForm #name,
+.SignUpForm input,
+.SignUpForm textarea{
+    text-transform: none !important;
+    border: 1px solid var(--primary-color);
+}
+
+.SignUpForm #description{
+    resize: none;
+    height: 150px;
+}
