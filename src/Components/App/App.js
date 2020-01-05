@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from '../Navbar/Navbar'
 import Landing from '../Landing/Landing';
 // import SignUpPage from '../../Routes/SignUpPage/SignUpPage';
-// import LoginPage from '../../Routes/LoginPage/LoginPage';
+import LoginPage from '../../Routes/LoginPage/LoginPage';
 import ExplorePage from '../../Routes/ExplorePage/ExplorePage';
 // import ShopPage from '../../Routes/ShopPage/ShopPage';
 import ShopListContext from '../../Contexts/ShopListContext';
@@ -40,12 +40,12 @@ export default class App extends Component {
       <Route path='/' component={Navbar} />
       <Switch>
         <Route exact path='/' component={Landing} />
-        {/* <Route exact path={`${config.BASEPATH}/signup`} component={SignUpPage} /> */}
-        {/* <Route exact path={`${config.BASEPATH}/login`} component={LoginPage} /> */}
+        {/* <Route exact path={`/signup`} component={SignUpPage} /> */}
+        <Route exact path={`/login`} component={LoginPage} />
         <Route exact path='/explore' component={ExplorePage} />
         {/* <Route 
           exact 
-          path={`${config.BASEPATH}/shop/:id`} 
+          path={`/shop/:id`} 
           component={ (rprops) => {
             const {id} = rprops.match.params;
             const shop = this.context.getShopById(id)[0];
@@ -55,7 +55,7 @@ export default class App extends Component {
             />
           }} 
         /> */}
-        {/* <Route path={`${config.BASEPATH}/favourite`} component={FavoritePage}/> */}
+        {/* <Route path={`/favourite`} component={FavoritePage}/> */}
       </Switch>
     </div>
     );
