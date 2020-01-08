@@ -1,5 +1,5 @@
-// const path = 'http://localhost:8000/api';
-const path = 'https://intense-castle-13181.herokuapp.com/api';
+const path = 'http://localhost:8000/api';
+// const path = 'https://intense-castle-13181.herokuapp.com/api';
 
 export default {
     API_ENDPOINT: path,

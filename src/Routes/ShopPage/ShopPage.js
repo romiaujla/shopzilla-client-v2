@@ -24,36 +24,10 @@ export default class ShopPage extends Component {
       product: {},
       editingMode: false,
       editingProductMode: false,
-      showEditButton: false,
-      showAddProductButton: false,
-      showDeleteButton: false,
-      showSaveButton: false,
     };
   }
 
   renderInitialPageState = () => {
-    // get a single shop and set to context
-    const { id } = this.props.rprops.match.params;
-
-    ShopService.getShopProducts(id)
-      .then(products => {
-        this.setState({
-          products
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-
-    if (localStorage.getItem('userId') === this.props.rprops.match.params.id
-      && localStorage.getItem('userType') === 'shop') {
-      this.setState({
-        showEditButton: true,
-        showAddProductButton: true,
-        showDeleteButton: true,
-      });
-    }
-    
     if(localStorage.getItem('userType') === 'buyer'){
       this.setState({
         showSaveButton: true
@@ -196,7 +170,7 @@ export default class ShopPage extends Component {
               </h4>
             </div>
           )}
-        {this.state.showEditButton && !this.state.editingMode && (
+        {this.props.showShopButtons && !this.state.editingMode && (
           <div>
             <button
               className='btn btn-primary'
@@ -226,7 +200,7 @@ export default class ShopPage extends Component {
         key={product.id}
         showSaveButton={this.state.showSaveButton}
         handleSaveProduct={this.handleSaveProduct}
-        showDeleteButton={this.state.showDeleteButton}
+        showDeleteButton={this.props.showShopButtons}
         handleDeleteProduct={this.handleDeleteProduct}
       />)
   }
@@ -255,13 +229,13 @@ export default class ShopPage extends Component {
   };
 
   render() {
-    const { products = [] } = this.state;
+    const { products = [] } = this.props;
     const { shop = {} } = this.props;
     return (
       <div className='seller-page'>
         {this.renderShopInfo(shop)}
         <section className='items'>
-          {this.state.showAddProductButton && (
+          {this.props.showShopButtons && (
             <button
               className='btn btn-primary'
               type='button'

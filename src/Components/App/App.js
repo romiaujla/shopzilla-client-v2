@@ -10,6 +10,7 @@ import ShopPage from '../../Routes/ShopPage/ShopPage';
 import ShopListContext from '../../Contexts/ShopListContext';
 import ShopService from '../../Service/ShopService';
 import FavouritePage from '../../Routes/FavouritePage/FavouritePage';
+import ProductService from '../../Service/ProductService';
 
 export default class App extends Component {
 
@@ -19,6 +20,8 @@ export default class App extends Component {
     super(props);
     this.state = { 
       loggedIn: false,
+      products: [],
+      shops: [],
     }
   }
 
@@ -26,12 +29,28 @@ export default class App extends Component {
     // get all the shops and set to context
     ShopService.getShops()
       .then((shops) => {
+        this.setState({
+          shops,
+        })
         this.context.setShops(shops);
       })
       .catch(err => {
         this.context.setError(err)
       })
-    
+
+    ProductService.getProducts()
+      .then((products) => {
+        this.setState({
+          products,
+        }, () => {
+          console.log(this.state.products);
+        })
+      })
+      .catch(err => {
+        this.setState({
+          hasError: true,
+        })
+      })
   }
 
   render() { 
@@ -49,12 +68,22 @@ export default class App extends Component {
           component={ (rprops) => {
             const {id} = rprops.match.params;
             const shop = this.context.getShopById(id)[0];
+            const products = this.state.products.filter(product => product.shop_id === parseInt(id, 10))
+            let showShopButtons = false;
+            if (localStorage.getItem('userId') === id
+                && localStorage.getItem('userType') === 'shop'){
+                  showShopButtons = true
+              }
+            // console.log(products);
             return <ShopPage 
               rprops={rprops} 
               shop={shop}
+              products={products}
+              showShopButtons={showShopButtons}
             />
           }} 
         />
+
         <Route path={`/favourite`} component={FavouritePage}/>
       </Switch>
     </div>
