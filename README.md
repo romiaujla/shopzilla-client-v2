@@ -1,5 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Shopzilla
+
+**This application is hosted using Netlify: https://shopzilla-client.netlify.com/**
+
+### API Documentation
+
+**Scheme: HTTP**
+
+Users:
+### `POST` '/api/users/' Create new user
+
+Products:
+### `POST` '/api/products' Add a new product to the shop
+### `DELETE` '/api/products/:product_id/shop/:shop_id' Delete product from shop
+
+Reviews:
+### `GET` '/api/reviews/:shop_id' Get reviews for a shop
+### `DELETE` '/api/reviews/:id' Delete product from shop
+### `POST` '/api/reviews/' Post review
+
+### App Summary
+Shopzilla is an E-commerce website where people can showcase their business for everyone in their world. The user can either create a seller account or a buyer account. If the user is a seller, they can create their own shop page where they can display their products, store hours, location and more! The buyer user can browse the different shops available and save products to their wishlist.
+
+### Technology Stack
+HTML5, CSS3, JavaScript, React, Node, Express, and PostgreSQL for the database.
+
 ## Available Scripts
 
 In the project directory, you can run:
