@@ -42,8 +42,6 @@ export default class App extends Component {
       .then((products) => {
         this.setState({
           products,
-        }, () => {
-          console.log(this.state.products);
         })
       })
       .catch(err => {
@@ -74,7 +72,6 @@ export default class App extends Component {
                 && localStorage.getItem('userType') === 'shop'){
                   showShopButtons = true
               }
-            // console.log(products);
             return <ShopPage 
               rprops={rprops} 
               shop={shop}

@@ -7,6 +7,7 @@ import SellerForm from '../../Components/SellerForm/SellerForm';
 import AddProductForm from '../../Components/AddProductForm/AddProductForm';
 import Product from '../../Components/Product/Product'
 import CommentForm from '../../Components/CommentForm/CommentForm'
+import FavouriteService from '../../Service/FavouriteService';
 
 //Shop Page route is when the buyer/customer clicks to visit the shop to see shop info and the products it offer
 
@@ -43,7 +44,6 @@ export default class ShopPage extends Component {
       this.setState({
         comments
       })
-      console.log(comments)
     })
   }
 
@@ -108,10 +108,17 @@ export default class ShopPage extends Component {
   handleSaveProduct = (product) => {
     const { savedProducts } = this.context
     //qualify if the product hasn't existed using product id
-    const result = savedProducts.find(prod => prod.id === product.id)
-    // console.log(savedProducts)
+    const result = savedProducts.find(prod => prod.id === product.id) 
     if (savedProducts.indexOf(result) === -1) {
-      this.context.saveProduct(product)
+      const newFav = {
+        buyer_id: localStorage.getItem('userId'),
+        product_id: product.id,
+      }
+      FavouriteService.insertFavourite(newFav)
+        .then(newProduct => {
+          this.context.addFavouriteProduct(newProduct);
+        })
+        .catch(err => {this.setState({hasError: true})})
       alert('Product saved successfully!')
     }
     else {

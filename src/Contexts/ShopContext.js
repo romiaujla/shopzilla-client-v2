@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoggedContext from './LoggedContext';
+import FavouriteService from '../Service/FavouriteService';
 
 //this context is to provide the information of a single shop
 
@@ -50,17 +51,28 @@ export class ShopProvider extends Component {
 
     //add new product to shop
     addProduct = (product) => {
-        
         this.setShopProducts(
             [...this.state.shopProducts, product]
         )
     }
 
-    saveProduct = (product) => { //save customer's favorite product
+    // set the favourite products
+    setFavouriteProducts = (savedProducts) => {
         this.setState({
-            savedProducts: this.state.savedProducts.concat(product)
+            savedProducts,
         })
     }
+
+    // add a favourite product
+    addFavouriteProduct = (addProduct) => { //save customer's favorite product
+        this.setState({
+            savedProducts: [
+                ...this.state.savedProducts,
+                addProduct,
+            ]
+        })
+    }
+
     //add comment to the product
     addComment = comment => {
         this.setComments([
