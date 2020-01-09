@@ -326,11 +326,15 @@ function ShopComments({ comments = [], handleDeleteComment }) {
         <li key={comment.id} className='comment'>
           <p className='review-text'>
             "{comment.review}"
-            <span
-              className='delete-review'
-              onClick={() => handleDeleteComment(comment.id)}>
-              <FontAwesomeIcon icon={faTrash} size='sm' style={{ color: 'red' }} />
-            </span>
+            {
+              localStorage.getItem('userType') === 'buyer' &&
+              <span
+                className='delete-review'
+                onClick={() => handleDeleteComment(comment.id)}>
+                <FontAwesomeIcon icon={faTrash} size='sm' style={{ color: 'red' }} />
+              </span>
+            }
+            
           </p>
 
           <p className='review-user'>
