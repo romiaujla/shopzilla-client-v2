@@ -3,7 +3,6 @@ import ShopContext from '../../Contexts/ShopContext'
 import './FavouritePage.css'
 import { arrayIsEmpty } from '../../HelperFunctions/HelperFunctions';
 import FavouriteService from '../../Service/FavouriteService';
-import ProductService from '../../Service/ProductService';
 
 class FavoritePage extends Component {
     

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import LoggedContext from './LoggedContext';
-import FavouriteService from '../Service/FavouriteService';
 
 //this context is to provide the information of a single shop
 

@@ -8,11 +8,22 @@ import AddProductForm from '../../Components/AddProductForm/AddProductForm';
 import Product from '../../Components/Product/Product'
 import CommentForm from '../../Components/CommentForm/CommentForm'
 import FavouriteService from '../../Service/FavouriteService';
+import { StarRating } from '../../Components/StarRating/StarRating'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 //Shop Page route is when the buyer/customer clicks to visit the shop to see shop info and the products it offer
 
 export default class ShopPage extends Component {
   static contextType = ShopContext;
+
+  static defaultProps = {
+    shop: {},
+    products: [],
+    rprops: {},
+    showShopButtons: false,
+    showBuyerButtons: false,
+  }
 
   constructor(props) {
     super(props);
@@ -25,21 +36,23 @@ export default class ShopPage extends Component {
       product: {},
       editingMode: false,
       editingProductMode: false,
+      showSaveButton: false,
+      hideCommentForm: true,
     };
   }
 
   renderInitialPageState = () => {
     if(localStorage.getItem('userType') === 'buyer'){
       this.setState({
-        showSaveButton: true
+        showSaveButton: true,
+        hideCommentForm: false
       })
     }
   };
 
-  getCommentsForShop = () => {
-    const { shopId } = this.props.rprops.match.params;
-
-    ShopService.getComments(shopId)
+  getCommentsForShop = async () => {
+    const { id } = this.props.rprops.match.params;
+    await ShopService.getComments(id)
     .then(comments => {
       this.setState({
         comments
@@ -47,9 +60,26 @@ export default class ShopPage extends Component {
     })
   }
 
+  addComment = (comment) => {
+    this.setState({
+      comments: [
+          ...this.state.comments,
+          comment
+        ]
+    })
+  }
+
+  handleDeleteComment = comment_id => {
+    const updatedComments = this.state.comments.filter(comment => comment.id !== comment_id)
+    this.setState({
+      comments: [...updatedComments]
+    });
+    ShopService.deleteComment(comment_id);
+  }
+
   componentDidMount() {
     this.renderInitialPageState();
-    // this.getCommentsForShop()
+    this.getCommentsForShop()
   };
 
 
@@ -192,8 +222,16 @@ export default class ShopPage extends Component {
             </button>
           </div>
         )}
-        <ShopComments comments={this.state.comments}/>
-        <CommentForm shop={this.state.shop}/>
+        <div className='Comment_Section'>
+          <ShopComments
+            comments={this.state.comments}
+            handleDeleteComment={this.handleDeleteComment} />
+          <CommentForm
+            shop={this.state.shop}
+            addComment={this.addComment}
+            isDisabled={this.state.hideCommentForm}
+          />
+        </div>
       </section>
     );
   }
@@ -239,7 +277,7 @@ export default class ShopPage extends Component {
     const { products = [] } = this.props;
     const { shop = {} } = this.props;
     return (
-      <div className='seller-page'>
+      <div className='seller-page ShopPage'>
         {this.renderShopInfo(shop)}
         <section className='items'>
           {this.props.showShopButtons && (
@@ -271,18 +309,34 @@ export default class ShopPage extends Component {
   }
 }
 
-function ShopComments({ comments = [] }) {
+function ShopComments({ comments = [], handleDeleteComment }) {
+
+  if(!comments.length){
+    return (
+      <div className='no-reviews'>
+        No reviews at the moment
+      </div>
+    )
+  }
+
   return (
-    <ul className='comment-list'>
+    <ul className='review-list'>
+      <li className='comment-header'>Reviews</li>
       {comments.map(comment =>
         <li key={comment.id} className='comment'>
-          <p className='comment-text'>
-            {comment.review}
+          <p className='review-text'>
+            "{comment.review}"
+            <span
+              className='delete-review'
+              onClick={() => handleDeleteComment(comment.id)}>
+              <FontAwesomeIcon icon={faTrash} size='sm' style={{ color: 'red' }} />
+            </span>
           </p>
-          <p className='comment-user'>
-            {/* <ThingStarRating rating={review.rating} /> */}
-           by UserName
-            {/* {comment.user.user_name} */}
+
+          <p className='review-user'>
+            <StarRating rating={comment.rating} />
+            {"  "}
+            - {comment.name}
           </p>
         </li>
       )}

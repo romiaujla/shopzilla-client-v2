@@ -68,6 +68,7 @@ export default class App extends Component {
             const shop = this.context.getShopById(id)[0];
             const products = this.state.products.filter(product => product.shop_id === parseInt(id, 10))
             let showShopButtons = false;
+            let showBuyerButtons = false;
             if (localStorage.getItem('userId') === id
                 && localStorage.getItem('userType') === 'shop'){
                   showShopButtons = true
@@ -77,6 +78,7 @@ export default class App extends Component {
               shop={shop}
               products={products}
               showShopButtons={showShopButtons}
+              showBuyerButtons={showBuyerButtons}
             />
           }} 
         />

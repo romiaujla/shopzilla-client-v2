@@ -161,6 +161,42 @@ const ShopService = {
           : res.json()
       )
   },
+  deleteComment(comment_id) {
+    return fetch(
+      `${config.API_ENDPOINT}/reviews/${comment_id}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'content-type': 'application/json',
+          authorization: `bearer ${TokenService.getAuthToken()}`
+        }
+      }
+    )
+      .then(res => res)
+      .catch(err => {
+        console.log(err);
+      });
+  },
+  getCommentById(commentId) {
+    return fetch(
+      `${config.API_ENDPOINT}/reviews/new/${commentId}`,
+      {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json',
+          authorization: `bearer ${TokenService.getAuthToken()}`
+        }
+      }
+    )
+    .then(res =>
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json()
+    )
+      .catch(err => {
+        console.log(err);
+      });
+  }
   
 };
 
