@@ -327,7 +327,8 @@ function ShopComments({ comments = [], handleDeleteComment }) {
           <p className='review-text'>
             "{comment.review}"
             {
-              localStorage.getItem('userType') === 'buyer' &&
+              (localStorage.getItem('userType') === 'buyer' 
+              && parseInt(localStorage.getItem('userId'), 10) === comment.buyer_id) && 
               <span
                 className='delete-review'
                 onClick={() => handleDeleteComment(comment.id)}>
