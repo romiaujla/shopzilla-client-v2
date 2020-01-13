@@ -2,29 +2,38 @@ import React, { Component } from 'react'
 import ShopContext from '../../Contexts/ShopContext'
 import './FavouritePage.css'
 import { arrayIsEmpty } from '../../HelperFunctions/HelperFunctions';
+import FavouriteService from '../../Service/FavouriteService';
 
 class FavoritePage extends Component {
+    
     state = {
         savedProducts: []
     }
+
     static contextType = ShopContext;
 
     componentDidMount() {
-        this.setState(previousState => ({
-            savedProducts: [...previousState.savedProducts, this.context.savedProducts]
-        }));
+        FavouriteService.getFavourite(localStorage.getItem('userId'))
+            .then((savedProducts) => {
+                this.setState({
+                    savedProducts,
+                })
+            })
+            .catch(err => {
+                this.setState({hasError: err})
+            })
     }
 
     handleRemoveProduct = (id) => {
-        const updatedProducts = this.state.savedProducts.filter(product => product.id !== id)
+        const savedProducts = this.state.savedProducts.filter(prod => prod.id !== id);
         this.setState({
-            savedProducts: [...updatedProducts]
-          });
-        alert('Removed');
+            savedProducts,
+        })
+        FavouriteService.deleteFavourite(localStorage.getItem('userId'), id);
     }
 
     renderProduct() {
-        return this.context.savedProducts.map(product => {
+        return this.state.savedProducts.map(product => {
             return (
                 <article key={product.id} >
                     <img
@@ -35,14 +44,11 @@ class FavoritePage extends Component {
                         <h3>{product.item}</h3>
                         <p>Description: {product.description}</p>
                         <p>Price: $ {product.price}</p>
-{/*                         
-                            <button
-                                onClick={() => this.handleRemoveProduct(product.id)}
-                                className='btn-delete'>
-                            
-                                Remove
-                            </button> */}
-                        
+                        <button
+                            onClick={() => this.handleRemoveProduct(product.id)}
+                            className='btn-delete'>
+                            Remove
+                        </button>
                     </div>
                 </article>
             );
@@ -50,7 +56,7 @@ class FavoritePage extends Component {
 }
 render() {
     return (
-        <div >
+        <div className='FavouritePage'>
             <h1>Your Saved Items</h1>
             <section className='grid'>
             {
