@@ -17,40 +17,40 @@ Link to API Repo
 ## **Screenshots**
 
 ###### ***Landing Page:***
-<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/landing.png" style="width: 315px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/landing.png" width="315px" />
 
 - Upon inital app load the user is presented with the Shopzilla landing page with a brief description of what the concept of the application is. The user has the option of creating an account or login.
 
 ###### ***Register Page:***
-<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/register.png" style="width: 315px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/register.png" width="315px" />
 
 - Register has user authentication
 - User can create a buyer/seller account
   
 ###### ***Login Page:***
-<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/login.png" style="width: 315px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/login.png" width="315px" />
 
 - User enters their username/password
 
 ###### ***Explore Page:***
-<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/explore1.png" style="width: 315px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/explore1.png" width="315px" />
 
 - User can search for an existing pop up
 - User can select a category to filter shops
-  <img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/explore2.png" style="width: 315px" />
+  <img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/explore2.png" width="315px" />
 - User can visit shop page by clicking shop card.
 
 ###### ***Shop Page w/ Buyer account:***
-<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/shop1.png" style="width: 315px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/shop1.png" width="315px" />
 
 - User can view store hours and location
 - User can leave reviews
-<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/shop2.png" style="width: 315px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/shop2.png" width="315px" />
 
 - User can save items they want to purchase in person
   
 ###### ***Shop Page w/ Seller account:***
-<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/shop-seller.png" style="width: 315px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/shop-seller.png" width="315px" />
 
 - User can add products to their store
 - User can remove products from their store
