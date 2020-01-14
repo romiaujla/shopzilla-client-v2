@@ -13,11 +13,11 @@ Shopzilla is an E-commerce application where people can showcase their business 
 
 Link to Client Repo
 
-    - https://github.com/romiaujla/shopzilla-client-v2
+    - [https://github.com/romiaujla/shopzilla-client-v2](https://github.com/romiaujla/shopzilla-client-v2)
 
 Link to API Repo
 
-    - https://github.com/romiaujla/shopzilla-server
+    - [https://github.com/romiaujla/shopzilla-server](https://github.com/romiaujla/shopzilla-server)
 
 ## **Screenshots**
 
