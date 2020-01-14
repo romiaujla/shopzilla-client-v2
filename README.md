@@ -1,94 +1,49 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Shopzilla
+# Shopzilla
+Shopzilla is an E-commerce application where people can showcase their business for everyone in their world. The user can either create a seller account or a buyer account. If the user is a seller, they can create their own shop page where they can display their products, store hours, location and more! The buyer user can browse the different shops available and save products to their wishlist.
 
-**This application is hosted using Netlify: https://shopzilla-client.netlify.com/**
 
-### API Documentation
+## **Screenshots**
 
-**Scheme: HTTP**
+###### ***Landing Page:***
+<img src="./images/screenshots/landing.png" style="width: 400px" />
+- Upon inital app load the user is presented with the Shopzilla landing page with a brief description of what the concept of the application is. The user has the option of creating an account or login.
 
-Users:
-### `POST` '/api/users/' Create new user
+###### ***Register Page:***
+<img src="./images/screenshots/register.png" style="width: 400px" />
+- Register has user authentication
+- User can create a buyer/seller account
+  
+###### ***Login Page:***
+<img src="./images/screenshots/login.png" style="width: 400px" />
+- User enters their username/password
 
-Products:
-### `POST` '/api/products' Add a new product to the shop
-### `DELETE` '/api/products/:product_id/shop/:shop_id' Delete product from shop
+###### ***Explore Page:***
+<img src="./images/screenshots/explore1.png" style="width: 400px" />
+- User can search for an existing pop up
+- User can select a category to filter shops
+  <img src="./images/screenshots/explore2.png" style="width: 400px" />
+- User can visit shop page by clicking shop card.
 
-Reviews:
-### `GET` '/api/reviews/:shop_id' Get reviews for a shop
-### `DELETE` '/api/reviews/:id' Delete product from shop
-### `POST` '/api/reviews/' Post review
+###### ***Shop Page w/ Buyer account:***
+<img src="./images/screenshots/shop1.png" style="width: 400px" />
+- User can view store hours and location
+- User can leave reviews
+<img src="./images/screenshots/shop2.png" style="width: 400px" />
+- User can save items they want to purchase in person
+  
+###### ***Shop Page w/ Seller account:***
+<img src="./images/screenshots/shop-seller.png" style="width: 400px" />
+- User can add products to their store
+- User can remove products from their store
 
-### App Summary
-Shopzilla is an E-commerce website where people can showcase their business for everyone in their world. The user can either create a seller account or a buyer account. If the user is a seller, they can create their own shop page where they can display their products, store hours, location and more! The buyer user can browse the different shops available and save products to their wishlist.
+
+
+
 
 ### Technology Stack
 HTML5, CSS3, JavaScript, React, Node, Express, and PostgreSQL for the database.
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c7c7847e-c081-412c-a086-350db179d0e9/deploy-status)](https://app.netlify.com/sites/shopzilla-client/deploys)
