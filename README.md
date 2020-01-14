@@ -40,7 +40,8 @@ Link to API Repo
 
 - User can search for an existing pop up
 - User can select a category to filter shops
-  <img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/explore2.png" width="315px" />
+
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/explore2.png" width="315px" />
 
 - User can visit shop page by clicking shop card.
 
