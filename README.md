@@ -7,7 +7,7 @@ Shopzilla is an E-commerce application where people can showcase their business 
 ## **Screenshots**
 
 ###### ***Landing Page:***
-<img src="./images/screenshots/landing.png" style="width: 400px" />
+<img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/landing.png" style="width: 400px" />
 - Upon inital app load the user is presented with the Shopzilla landing page with a brief description of what the concept of the application is. The user has the option of creating an account or login.
 
 ###### ***Register Page:***
