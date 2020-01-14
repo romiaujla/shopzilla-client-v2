@@ -8,7 +8,7 @@ Shopzilla is an E-commerce application where people can showcase their business 
 
 ## Links
 
-Live Link to App (Front-End hosted on Netlify)
+Live Link to App [![Netlify Status](https://api.netlify.com/api/v1/badges/c7c7847e-c081-412c-a086-350db179d0e9/deploy-status)](https://shopzilla-client.netlify.com/)
     - https://shopzilla-client.netlify.com/
 
 Link to Client Repo
@@ -66,5 +66,3 @@ Link to API Repo
 ### Technology Stack
 HTML5, CSS3, JavaScript, React, Node, Express, and PostgreSQL for the database.
 
-### ***Deployment Status***
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c7c7847e-c081-412c-a086-350db179d0e9/deploy-status)](https://shopzilla-client.netlify.com/)
