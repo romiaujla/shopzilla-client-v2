@@ -3,16 +3,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Shopzilla
 Shopzilla is an E-commerce application where people can showcase their business for everyone in their world. The user can either create a seller account or a buyer account. If the user is a seller, they can create their own shop page where they can display their products, store hours, location and more! The buyer user can browse the different shops available and save products to their wishlist.
 
+###### ***Collaborators***
+    - Jordan Duran | https://github.com/jordanduran
+    - Chau Tran | https://github.com/ChauTran73
+
 ## Links
 
 Live Link to App (Front-End deployed on Github Pages)
-    - https://romiaujla.github.io/dispatch-office-client/
+    - https://shopzilla-client.netlify.com/
 
 Link to Client Repo
-    - https://github.com/romiaujla/dispatch-office-client
+    - https://github.com/romiaujla/shopzilla-client-v2
 
 Link to API Repo
-    - https://github.com/romiaujla/dispatch-office-server
+    - https://github.com/romiaujla/shopzilla-server
 
 ## **Screenshots**
 
@@ -38,6 +42,7 @@ Link to API Repo
 - User can search for an existing pop up
 - User can select a category to filter shops
   <img src="https://github.com/romiaujla/shopzilla-client-v2/blob/master/public/images/screenshots/explore2.png" width="315px" />
+
 - User can visit shop page by clicking shop card.
 
 ###### ***Shop Page w/ Buyer account:***
@@ -62,5 +67,5 @@ Link to API Repo
 ### Technology Stack
 HTML5, CSS3, JavaScript, React, Node, Express, and PostgreSQL for the database.
 
-### ***Deployment***
+### ***Deployment Status***
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c7c7847e-c081-412c-a086-350db179d0e9/deploy-status)](https://shopzilla-client.netlify.com/)
