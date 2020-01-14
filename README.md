@@ -4,12 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Shopzilla is an E-commerce application where people can showcase their business for everyone in their world. The user can either create a seller account or a buyer account. If the user is a seller, they can create their own shop page where they can display their products, store hours, location and more! The buyer user can browse the different shops available and save products to their wishlist.
 
 ###### ***Collaborators***
-    - Jordan Duran | https://github.com/jordanduran
-    - Chau Tran | https://github.com/ChauTran73
+  Jordan Duran 
+    - https://github.com/jordanduran
+  Chau Tran
+    - https://github.com/ChauTran73
 
 ## Links
 
-Live Link to App (Front-End deployed on Github Pages)
+Live Link to App (Front-End hosted on Netlify)
     - https://shopzilla-client.netlify.com/
 
 Link to Client Repo
