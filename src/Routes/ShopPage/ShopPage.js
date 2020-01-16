@@ -58,6 +58,8 @@ export default class ShopPage extends Component {
         comments
       })
     })
+    .catch((err) => {console.log(err)});
+    
   }
 
   addComment = (comment) => {
