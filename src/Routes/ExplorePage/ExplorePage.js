@@ -56,7 +56,6 @@ class ExplorePage extends Component {
 
     ShopService.getShopsForSearchBox(term)
       .then(shops => {
-        console.log(shops);
         this.setState({
           shops,
         })

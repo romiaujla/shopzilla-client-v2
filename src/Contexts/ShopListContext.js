@@ -61,9 +61,7 @@ export class ShopListProvider extends Component {
                     opening_time: newShopData.opening_time,
                     closing_time: newShopData.closing_time,
                 }
-                console.log(this.context.shop);
                 this.context.setShop(shop);
-                console.log(this.context.shop);
             }
             return shop;
         })
