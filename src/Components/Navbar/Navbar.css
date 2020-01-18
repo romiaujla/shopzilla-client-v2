@@ -61,3 +61,14 @@
 .navbar button.link-btn:focus {
   color: var(--primary-color);
 }
+@media only screen and (max-width: 768px) {
+  .navbar li,
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar li {
+    align-self: center;
+    
+  }
+  
+}
