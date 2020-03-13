@@ -9,7 +9,7 @@ Shopzilla is an E-commerce application where people can showcase their business 
 ## Links
 
 [Live Link to App](https://shopzilla-client.netlify.com/) <br />  
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c7c7847e-c081-412c-a086-350db179d0e9/deploy-status)](https://simpletasklist.netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c7c7847e-c081-412c-a086-350db179d0e9/deploy-status)](https://shopzilla-client.netlify.com/)
 
 Link to Client Repo
 - [https://github.com/romiaujla/shopzilla-client-v2](https://github.com/romiaujla/shopzilla-client-v2)
